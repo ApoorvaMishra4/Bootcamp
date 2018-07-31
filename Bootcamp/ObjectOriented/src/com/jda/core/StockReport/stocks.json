@@ -1,0 +1,13 @@
+[ {
+  "name" : "Dainik Jagran",
+  "price" : 400,
+  "quantity" : 400
+}, {
+  "name" : "Dainik Bhaskar",
+  "price" : 210,
+  "quantity" : 100
+}, {
+  "name" : "Hindustan",
+  "price" : 160,
+  "quantity" : 133
+} ]
