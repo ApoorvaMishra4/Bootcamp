@@ -16,14 +16,12 @@ import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.type.TypeReference;
 
-import com.jda.utility.QueueLinkedList;
-import com.jda.utility.QueueLinkedList.Node;
 import com.jda.utility.StackLinkedList;
 
 public class StockAccount {
 
-	private String path = "/home/bridgelabz/java-programs/Functional-Programs/ObjectOriented/src/com/jda/core/StockReport";
-	private QueueLinkedList<CompanyShares> sharesOfPerson = new QueueLinkedList<>();
+	private String path = "/home/bridgelabz/java-programs/Bootcamp/ObjectOriented/src/com/jda/core/StockReport";
+	private List<CompanyShares> sharesOfPerson = new ArrayList<>();
 	private List<Stock> sharesAvailable = sharesAvailable();
 	private StackLinkedList<String> companyTransactions = new StackLinkedList<>();
 	private LinkedList<String> dateTransactions = new LinkedList<>();
@@ -48,7 +46,7 @@ public class StockAccount {
 		ObjectMapper mapper = new ObjectMapper();
 		List<String> allFiles = allFiles();
 		filename = filename.toLowerCase();
-		File file = new File(path + "/" + filename);
+		File file = new File(path + "/" + filename + ".json");
 		if (allFiles.contains(filename + ".json")) {
 			String data = new String(Files.readAllBytes(Paths.get(path + "/" + filename + ".json")));
 			sharesOfPerson = mapper.readValue(data, new TypeReference<ArrayList<CompanyShares>>() {
@@ -60,18 +58,19 @@ public class StockAccount {
 
 	public double valueOf() {
 		int amount = 0;
-		// for (CompanyShares shareOfPerson : sharesOfPerson) {
-		// for (Stock stockOfCompany : sharesAvailable) {
-		// amount += shareOfPerson.getNumberOfShares() *
-		// stockOfCompany.getPrice();
-		// }
-		// }
-		QueueLinkedList.Node<CompanyShares> node = sharesOfPerson.head;
-		while (node != null) {
-			for (Stock stockOfCompany : sharesAvailable) {
-				amount += node.data.getNumberOfShares() * stockOfCompany.getPrice();
+		for (CompanyShares share : sharesOfPerson)
+		{
+			String name = share.getSymbol();
+			float price = 0;
+			for (Stock stock : sharesAvailable)
+			{
+				if (stock.getName().equalsIgnoreCase(name))
+				{
+					price = stock.getPrice();
+					break;
+				}
 			}
-			node = node.next;
+			amount += price * share.getNumberOfShares();
 		}
 		return amount;
 	}
@@ -86,11 +85,11 @@ public class StockAccount {
 				if (companyPresent(symbol) != null) {
 					share = companyPresent(symbol);
 					share.setNumberOfShares(share.getNumberOfShares() + (int) (amount / x.getPrice()));
-					sharesOfPerson.pop(companyPresent(symbol));
-					sharesOfPerson.push(share);
+					sharesOfPerson.remove(companyPresent(symbol));
+					sharesOfPerson.add(share);
 				} else {
 					share.setNumberOfShares((int) (amount / x.getPrice()));
-					sharesOfPerson.push(share);
+					sharesOfPerson.add(share);
 				}
 				x.setQuantity(x.getQuantity() - (int) (amount / x.getPrice()));
 				companyTransactions.push(share.getSymbol());
@@ -100,42 +99,33 @@ public class StockAccount {
 	}
 
 	public CompanyShares companyPresent(String symbol) {
-		// for (CompanyShares x : sharesOfPerson) {
-		// if (x.getSymbol().toLowerCase().equals(symbol.toLowerCase())) {
-		// return x;
-		// }
-		// }
-		QueueLinkedList.Node<CompanyShares> node = sharesOfPerson.head;
-		while (node != null) {
-			if (node.data.getSymbol().toLowerCase().equals(symbol.toLowerCase())) {
-				return node.data;
+		for (CompanyShares x : sharesOfPerson) {
+			if (x.getSymbol().toLowerCase().equals(symbol.toLowerCase())) {
+				return x;
 			}
-			node = node.next;
 		}
 		return null;
 	}
 
 	public void sell(int amount, String symbol) {
 		boolean companyFound = false;
-		QueueLinkedList.Node<CompanyShares> node = sharesOfPerson.head;
-		while (node != null) {
-			if (node.data.getSymbol().toLowerCase().equals(symbol.toLowerCase())) {
+		for (CompanyShares share : sharesOfPerson) {
+			if (share.getSymbol().toLowerCase().equals(symbol.toLowerCase())) {
 				companyFound = true;
 				float price = 0;
 				for (Stock stock : sharesAvailable) {
-					if (stock.getName().toLowerCase().equals(node.data.getSymbol().toLowerCase())) {
+					if (stock.getName().toLowerCase().equals(share.getSymbol().toLowerCase())) {
 						price = stock.getPrice();
-						float value = price * node.data.getNumberOfShares();
+						float value = price * share.getNumberOfShares();
 						if (value >= amount) {
-							node.data.setNumberOfShares(node.data.getNumberOfShares() - (int) (amount / price));
-							node.data.setDate(date.toString());
+							share.setNumberOfShares(share.getNumberOfShares() - (int) (amount / price));
+							share.setDate(date.toString());
 						}
 						stock.setQuantity(stock.getQuantity() + (int) (amount / price));
 						break;
 					}
 				}
 			}
-			node = node.next;
 		}
 		if (!companyFound) {
 			System.out.print("Company does not exist!");
@@ -156,6 +146,7 @@ public class StockAccount {
 		file.write(json);
 		file.close();
 		System.out.print("\nData saved successfully!\n");
+		System.exit(0);
 	}
 
 	public void printReport() {
@@ -164,12 +155,10 @@ public class StockAccount {
 				"--------------------------------------------------------------------------------------------------------------");
 		System.out.print("\nAccount Details:\n");
 		int i = 1;
-		QueueLinkedList.Node<CompanyShares> node = sharesOfPerson.head;
-		while (node!=null) {
+		for (CompanyShares share : sharesOfPerson) {
 			System.out.print("\n");
-			System.out.print(i + ". " + node.data.getSymbol() + " : " + node.data.getNumberOfShares() + "\n");
+			System.out.print(i + ". " + share.getSymbol() + " : " + share.getNumberOfShares() + "\n");
 			i++;
-			node = node.next;
 		}
 
 		System.out.print(

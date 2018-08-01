@@ -1,0 +1,11 @@
+package PrototypePattern;
+
+public class Test {
+	public static void main(String[] args) throws CloneNotSupportedException {
+		Employees emp = new Employees();
+		emp.loadData();
+		
+		Employees emp1;
+		emp1 =  (Employees) emp.clone();
+	}
+}

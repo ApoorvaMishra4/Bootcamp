@@ -1,0 +1,23 @@
+package com.jda.core.factoryPattern;
+
+public class PC extends Computer {
+
+	@Override
+	public String getRam() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getHdd() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getCpu() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

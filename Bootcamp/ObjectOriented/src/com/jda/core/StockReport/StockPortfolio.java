@@ -17,7 +17,7 @@ public class StockPortfolio {
 		String data;
 		try {
 			data = new String(Files.readAllBytes(Paths.get(
-					"/home/bridgelabz/java-programs/Functional-Programs/ObjectOriented/src/com/jda/core/StockReport/stocks.json")));
+					"/home/bridgelabz/java-programs/Bootcamp/ObjectOriented/src/com/jda/core/StockReport/stocks.json")));
 		} catch (Exception e) {
 			System.out.println("File does not exist!");
 			return null;

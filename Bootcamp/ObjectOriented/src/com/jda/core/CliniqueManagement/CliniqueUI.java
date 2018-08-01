@@ -24,7 +24,7 @@ public class CliniqueUI {
 	static public List<Doctor> readDoctorData() throws JsonParseException, JsonMappingException, IOException {
 		ObjectMapper mapper = new ObjectMapper();
 		allDoctors = mapper.readValue(
-				new File("C:\\Projects\\Bootcamp\\Functional-Programs\\ObjectOriented\\Files\\doctors.json"),
+				new File("/home/bridgelabz/java-programs/Bootcamp/ObjectOriented/src/com/jda/core/CliniqueManagement/doctors.json"),
 				new TypeReference<ArrayList<Doctor>>() {
 				});
 		return allDoctors;
@@ -34,7 +34,7 @@ public class CliniqueUI {
 		ObjectMapper mapper = new ObjectMapper();
 		try {
 			allPatients = mapper.readValue(
-					new File("C:\\Projects\\Bootcamp\\Functional-Programs\\ObjectOriented\\Files\\patients.json"),
+					new File("/home/bridgelabz/java-programs/Bootcamp/ObjectOriented/src/com/jda/core/CliniqueManagement/patients.json"),
 					new TypeReference<ArrayList<Patient>>() {
 					});
 		} catch (Exception e) {
