@@ -1,4 +1,4 @@
 /bin/
-/.metadata/
+.metadata/
 /.recommenders/
-/RemoteSystemsTempFiles/
+RemoteSystemsTempFiles/
