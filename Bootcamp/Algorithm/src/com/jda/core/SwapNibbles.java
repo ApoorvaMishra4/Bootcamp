@@ -1,4 +1,4 @@
-package com.jda.core.Algorithm;
+package com.jda.core;
 
 import com.jda.utility.AlgorithmUtility;
 

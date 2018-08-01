@@ -13,6 +13,14 @@ public class AlgorithmUtility {
 	public static int getInt() {
 		return input.nextInt();
 	}
+	
+	public static int[] get1DIntArray(int n) {
+            int[] array = new int[n];
+            for (int i = 0; i < n; i++) {
+                    array[i] = input.nextInt();
+            }
+            return array;
+    }
 
 	public static void dayOfWeek(int m, int d, int y) {
 		int y1 = y - (14 - m) / 12;

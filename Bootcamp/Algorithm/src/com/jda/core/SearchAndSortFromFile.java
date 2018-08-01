@@ -1,11 +1,10 @@
-package com.jda.core.Algorithm;
+package com.jda.core;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 import com.jda.utility.AlgorithmUtility;
-import com.jda.utility.FunctionalUtility;
 
 public class SearchAndSortFromFile {
 	public static void main(String args[]) throws FileNotFoundException {
@@ -24,7 +23,7 @@ public class SearchAndSortFromFile {
 		case 1:
 		{
 			System.out.print("Enter the word to search:");
-			String key = FunctionalUtility.getString();
+			String key = AlgorithmUtility.getString();
 			System.out.println(AlgorithmUtility.binarySearchString(allWords, key));
 		}
 		break;
