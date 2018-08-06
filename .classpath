@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="src" path="DataStructures/src"/>
-	<classpathentry kind="src" path="Functional/src"/>
-	<classpathentry kind="src" path="ObjectOriented/src"/>
-	<classpathentry kind="lib" path="C:/Users/1022776/Downloads/jackson-all-1.9.0.jar/jackson-all-1.9.0.jar"/>
-	<classpathentry kind="output" path="bin"/>
-</classpath>
