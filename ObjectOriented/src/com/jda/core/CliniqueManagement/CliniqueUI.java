@@ -1,0 +1,386 @@
+package com.jda.core.CliniqueManagement;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.codehaus.jackson.JsonGenerationException;
+import org.codehaus.jackson.JsonParseException;
+import org.codehaus.jackson.map.JsonMappingException;
+import org.codehaus.jackson.map.ObjectMapper;
+import org.codehaus.jackson.type.TypeReference;
+
+import com.jda.utility.Utility;
+
+public class CliniqueUI {
+	private static List<Doctor> allDoctors;
+	private static List<Patient> allPatients;
+	private static Map<Doctor, ArrayList<Patient>> appointments = new HashMap<>();
+
+	static public List<Doctor> readDoctorData() throws JsonParseException, JsonMappingException, IOException {
+		ObjectMapper mapper = new ObjectMapper();
+		allDoctors = mapper.readValue(
+				new File("/home/bridgelabz/java-programs/Bootcamp/ObjectOriented/src/com/jda/core/CliniqueManagement/doctors.json"),
+				new TypeReference<ArrayList<Doctor>>() {
+				});
+		return allDoctors;
+	}
+
+	static public List<Patient> readPatientData() throws JsonParseException, JsonMappingException, IOException {
+		ObjectMapper mapper = new ObjectMapper();
+		try {
+			allPatients = mapper.readValue(
+					new File("/home/bridgelabz/java-programs/Bootcamp/ObjectOriented/src/com/jda/core/CliniqueManagement/patients.json"),
+					new TypeReference<ArrayList<Patient>>() {
+					});
+		} catch (Exception e) {
+			allPatients = new ArrayList<Patient>();
+		}
+		return allPatients;
+	}
+
+	static public Doctor searchDoctor(int id) {
+		Utility.getString();
+		for (Doctor doctor : allDoctors) {
+			if (doctor.id == id) {
+				return doctor;
+			}
+		}
+		return null;
+	}
+
+	static public Doctor searchDoctor(int type, String data) {
+		switch (type) {
+		case 1: {
+			for (Doctor doctor : allDoctors) {
+				if (doctor.name.equals(data)) {
+					return doctor;
+				}
+			}
+			break;
+		}
+		case 2: {
+			for (Doctor doctor : allDoctors) {
+				if (doctor.specialization.equals(data)) {
+					return doctor;
+				}
+			}
+			break;
+		}
+		case 3: {
+			for (Doctor doctor : allDoctors) {
+				if (doctor.availability.equals(data)) {
+					return doctor;
+				}
+			}
+			break;
+		}
+		}
+		return null;
+	}
+
+	static public Patient searchPatient(String data) {
+		for (Patient patient : allPatients) {
+			if (patient.name.equals(data)) {
+				return patient;
+			}
+		}
+		return null;
+	}
+
+	static public Patient searchPatient(int type, int data) {
+		switch (type) {
+		case 2: {
+			for (Patient patient : allPatients) {
+				if (patient.id == data) {
+					return patient;
+				}
+			}
+			break;
+		}
+		case 3: {
+			for (Patient patient : allPatients) {
+				if (patient.mobileNumber == data) {
+					return patient;
+				}
+			}
+			break;
+		}
+		}
+		return null;
+	}
+
+	static public void printDoctorDetails(Doctor doctor) {
+		System.out.print("\nName: " + doctor.getName());
+		System.out.print("\nID: " + doctor.getId());
+		System.out.print("\nSpecialization: " + doctor.getSpecialization());
+		System.out.print("\nAvailability: " + doctor.getAvailability());
+	}
+
+	static public void printPatientDetails(Patient patient) {
+		System.out.print("\nName: " + patient.getName());
+		System.out.print("\nID: " + patient.getId());
+		System.out.print("\nSpecialization: " + patient.getMobileNumber());
+		System.out.print("\nAvailability: " + patient.getAge());
+	}
+
+	static public Doctor setDoctorDetails() {
+		Doctor doctor = new Doctor();
+		System.out.print("\nEnter the name:");
+		doctor.setName(Utility.getString());
+		System.out.print("\nEnter the specialization:");
+		doctor.setSpecialization((Utility.getString()));
+		System.out.print("\nEnter the ID:");
+		doctor.setId(Utility.getInt());
+		Utility.getString();
+		System.out.print("\nEnter the availability:");
+		doctor.setAvailability(Utility.getString());
+		return doctor;
+	}
+
+	static public Patient setPatientDetails() {
+		Patient patient = new Patient();
+		System.out.print("\n***Patient Details***");
+		System.out.print("\nEnter name:");
+		patient.setName(Utility.getString());
+		System.out.print("\nEnter ID:");
+		patient.setId(Utility.getInt());
+		System.out.print("\nEnter mobile number:");
+		patient.setMobileNumber(Utility.getLong());
+		System.out.print("\nEnter age");
+		patient.setAge(Utility.getInt());
+		return patient;
+	}
+
+	static public void addDoctor() throws JsonGenerationException, JsonMappingException, IOException {
+		allDoctors.add(setDoctorDetails());
+		ObjectMapper mapper = new ObjectMapper();
+		String json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(allDoctors);
+		String path = "C:\\Projects\\Bootcamp\\Functional-Programs\\ObjectOriented\\Files\\doctors.json";
+		FileWriter file = new FileWriter(path);
+		file.write(json);
+		file.close();
+	}
+
+	static public void addPatient() throws JsonGenerationException, JsonMappingException, IOException {
+		allPatients.add(setPatientDetails());
+		ObjectMapper mapper = new ObjectMapper();
+		String json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(allPatients);
+		String path = "C:\\Projects\\Bootcamp\\Functional-Programs\\ObjectOriented\\Files\\patients.json";
+		FileWriter file = new FileWriter(path);
+		file.write(json);
+		file.close();
+	}
+
+	static public void askAppointmentDetails() {
+		System.out.print("\nEnter the specialization:");
+		String specialization = Utility.getString();
+		System.out.print("\nEnter the time (am/pm/both) :");
+		String time = Utility.getString();
+		ArrayList<Doctor> doctor = new ArrayList<>();
+		for (Doctor x : allDoctors) {
+			if (x.getSpecialization().equals(specialization) && x.getAvailability().equals(time)) {
+				doctor.add(x);
+			}
+		}
+		if (doctor.size() == 0) {
+			System.out.print("\nNo doctor found with this specialization!");
+			return;
+		}
+
+		for (Doctor x : doctor) {
+			if (appointments.containsKey(x)) {
+				ArrayList<Patient> patientsWithAppointment = appointments.get(x);
+				if (patientsWithAppointment.size() < 5) {
+					patientsWithAppointment.add(setPatientDetails());
+					appointments.put(x, patientsWithAppointment);
+					System.out.print("\nAppointment booked!");
+					return;
+				}
+			} else {
+				ArrayList<Patient> patientsWithAppointment = new ArrayList<>();
+				patientsWithAppointment.add(setPatientDetails());
+				appointments.put(x, patientsWithAppointment);
+				System.out.print("\nAppointment booked!");
+				return;
+			}
+		}
+		System.out.print("\nAll doctors with this specialization and time are busy!");
+		return;
+	}
+
+	static public void bookAppointment() {
+		System.out.print("\n1. Book an appointment with a specific doctor");
+		System.out.print("\n2. Book an appointment with any doctor");
+		int choice = Utility.getInt();
+		Utility.getString();
+		int choice2;
+		switch (choice) {
+		case 1: {
+			System.out.print("\nEnter the name of Doctor:");
+			String name = Utility.getString();
+			Doctor doctor = searchDoctor(1, name);
+			if (appointments.containsKey(doctor)) {
+				int size = appointments.get(doctor).size();
+				if (size < 5) {
+					ArrayList<Patient> patientsWithAppointment = appointments.get(doctor);
+					patientsWithAppointment.add(setPatientDetails());
+					appointments.put(doctor, patientsWithAppointment);
+				} else {
+					System.out.print("\nThe doctor is booked for the day!");
+					System.out.print("\n1. Book an appointment with another doctor");
+					System.out.print("\n2. Exit without booking");
+					System.out.print("\nEnter choice:");
+					choice2 = Utility.getInt();
+					Utility.getString();
+					if (choice2 == 2) {
+						break;
+					}
+					switch (choice2) {
+					case 1: {
+						askAppointmentDetails();
+						break;
+					}
+					}
+				}
+			} else {
+				ArrayList<Patient> patientsWithAppointment = new ArrayList<>();
+				patientsWithAppointment.add(setPatientDetails());
+				appointments.put(doctor, patientsWithAppointment);
+			}
+			break;
+		}
+		case 2: {
+			askAppointmentDetails();
+			break;
+		}
+		}
+	}
+
+	public static void main(String[] args) throws JsonGenerationException, JsonMappingException, IOException {
+
+		allDoctors = readDoctorData();
+		allPatients = readPatientData();
+
+		System.out.print("************************************************");
+		System.out.print("\n\tWelcome to Clinique");
+		System.out.print("\n************************************************");
+
+		while (true) {
+			System.out.print("\n1. Add entry");
+			System.out.print("\n2. Search a Doctor");
+			System.out.print("\n3. Search a Patient");
+			System.out.print("\n4. Book an appointment");
+			System.out.print("\n5. Exit");
+			System.out.print("\nEnter choice :");
+			int choice = Utility.getInt();
+			Utility.getString();
+			if (choice == 5) {
+				break;
+			}
+			int choice2;
+			switch (choice) {
+			case 1: {
+				while (true) {
+					System.out.print("\n1. Add Doctor");
+					System.out.print("\n2. Add Patient");
+					System.out.print("\n3. Exit");
+					System.out.print("\nEnter choice :");
+					choice2 = Utility.getInt();
+					Utility.getString();
+					if (choice2 == 3) {
+						break;
+					}
+					switch (choice2) {
+					case 1: {
+						addDoctor();
+						break;
+					}
+					case 2: {
+						addPatient();
+						break;
+					}
+					}
+				}
+				break;
+			}
+			case 2: {
+				while (true) {
+					System.out.print("\n1. Search by name");
+					System.out.print("\n2. Search by specialization");
+					System.out.print("\n3. Search by availability");
+					System.out.print("\n4. Search by ID");
+					System.out.print("\n5. Exit");
+					choice2 = Utility.getInt();
+					Utility.getString();
+					if (choice2 == 5) {
+						break;
+					}
+					switch (choice2) {
+					case 1: {
+						System.out.print("\nEnter the doctor's name:");
+						printDoctorDetails(searchDoctor(choice2, Utility.getString()));
+						break;
+					}
+					case 2: {
+						System.out.print("\nEnter the specialization:");
+						printDoctorDetails(searchDoctor(choice2, Utility.getString()));
+						break;
+					}
+					case 3: {
+						System.out.print("\nEnter the availability time:");
+						printDoctorDetails(searchDoctor(choice2, Utility.getString()));
+						break;
+					}
+					case 4: {
+						System.out.print("\nEnter the ID:");
+						printDoctorDetails(searchDoctor(Utility.getInt()));
+						break;
+					}
+					}
+				}
+				break;
+			}
+			case 3: {
+				while (true) {
+					System.out.print("\n1. Search by name");
+					System.out.print("\n2. Search by ID");
+					System.out.print("\n3. Search by mobileNumber");
+					System.out.print("\n4. Exit");
+					choice2 = Utility.getInt();
+					Utility.getString();
+					if (choice2 == 4) {
+						break;
+					}
+					switch (choice2) {
+					case 1: {
+						System.out.print("\nEnter the patient's name:");
+						System.out.print(searchPatient(Utility.getString()).getName());
+						break;
+					}
+					case 2: {
+						System.out.print("\nEnter the ID:");
+						System.out.print(searchPatient(Utility.getString()).getId());
+						break;
+					}
+					case 3: {
+						System.out.print("\nEnter the mobile number:");
+						System.out.print(searchPatient(Utility.getString()).getMobileNumber());
+						break;
+					}
+					}
+				}
+				break;
+			}
+			case 4: {
+				bookAppointment();
+				break;
+			}
+			}
+		}
+	}
+}
