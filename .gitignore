@@ -1,5 +1,5 @@
 \.classpath
-\.metadata\*
-\bin\*
+.metadata/
+bin/
 \RemoteSystemsTempFiles\
 \.project

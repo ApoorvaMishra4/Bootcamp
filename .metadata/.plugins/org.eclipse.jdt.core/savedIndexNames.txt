@@ -1,2 +1,0 @@
-INDEX VERSION 1.129+/home/bridgelabz/java-programs/Bootcamp/.metadata/.plugins/org.eclipse.jdt.core
-309932330.index
