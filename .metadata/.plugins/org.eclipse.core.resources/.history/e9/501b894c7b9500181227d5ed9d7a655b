@@ -1,0 +1,5 @@
+package com.jda.core.ProxyDesign;
+
+public class ProxyPatternTest {
+
+}

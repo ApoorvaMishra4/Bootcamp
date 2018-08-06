@@ -1,0 +1,9 @@
+package com.jda.core.singleton;
+
+public class BillPugh {
+	private static BillPugh instance;
+	
+	private static class BillPugh{
+		private static final BillPugh INSTANCE = new BillPugh();
+	}
+}
