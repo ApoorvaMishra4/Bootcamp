@@ -1,1 +1,5 @@
-\newfolder\
+\.classpath
+\.metadata\
+\bin\
+\RemoteSystemsTempFiles\
+\.project
