@@ -1,8 +1,0 @@
-package PrototypePattern;
-
-import java.util.List;
-
-public class Employees implements Cloneable{
-	
-	private List<String> empList;
-}
