@@ -1,0 +1,6 @@
+package com.jda.core.factoryPattern;
+
+
+public class PC extends Computer {
+
+}
