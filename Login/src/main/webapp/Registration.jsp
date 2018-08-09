@@ -10,8 +10,7 @@
 	<form method="post" action="registration">
 		<h3>Sign up here!</h3>
 		<label for="name">Name</label> <input type="text" name="name"
-			placeholder="name"> <br> <label for="username">User
-			name</label> <input type="text" name="username" placeholder="username">
+			placeholder="name"> <br> <label for="email">Email</label> <input type="text" name="email" placeholder="email">
 		<br> <label for="password">Password</label> <input
 			type="password" name="password" placeholder="password"> <br>
 		<label for="reEnterPassword">Enter password again</label> <input

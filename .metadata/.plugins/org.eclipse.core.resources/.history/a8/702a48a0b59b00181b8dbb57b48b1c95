@@ -1,0 +1,16 @@
+package com.jda.dao;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class DatabaseUtil {
+	private static String jdbcUrl;
+	
+	public static Connection getConnection()
+	{
+		Class.forName("com.mysql.jdbc.Driver");
+		Connection connection = DriverManager.getConnection(jdbcUrl);
+		return null;
+		
+	}
+}

@@ -1,0 +1,5 @@
+package com.jda.model;
+
+public class UserModel {
+
+}

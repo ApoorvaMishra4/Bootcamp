@@ -1,0 +1,22 @@
+package com.jda.controller;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.jda.model.UserModel;
+
+public class SignUpController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) {
+		UserModel user = new UserModel();
+		user.setName(request.getParameter("name"));
+		user.setEmail(request.getParameter("email"));
+		user.setPassword(request.getParameter("password"));
+		user.setPhoneNumber(request.getParameter("phoneNumber"));
+		// RequestDispatcher requestDispatcher =
+		// request.getRequestDispatcher(response.encodeRedirectUrl("Login.jsp"));
+		// requestDispatcher.forward(request, response);
+	}
+}

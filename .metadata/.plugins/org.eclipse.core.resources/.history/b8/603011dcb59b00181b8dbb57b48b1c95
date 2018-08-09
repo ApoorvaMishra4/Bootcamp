@@ -1,0 +1,18 @@
+package com.jda.dao;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class DatabaseUtil {
+	private static String jdbcUrl;
+
+	public static Connection getConnection() throws ClassNotFoundException, SQLException {
+		jdbcUrl = "jdbc:mysql://" + System.getenv("DBHOST") + ":3306/" + System.getenv("DBNAME") + "?user="
+				+ System.getenv("DBUSER") + "&password=" + System.getenv("DBPASSWORD");
+		Class.forName("com.mysql.jdbc.Driver");
+		Connection connection = DriverManager.getConnection(jdbcUrl);
+		return connection;
+	}
+
+}
