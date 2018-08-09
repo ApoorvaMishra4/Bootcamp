@@ -6,7 +6,6 @@
   <display-name>Archetype Created Web Application</display-name>
   <servlet>
   	<servlet-name>SignUpController</servlet-name>
-  	<display-name>SignUpController</display-name>
   	<servlet-class>com.jda.controller.SignUpController</servlet-class>
   </servlet>
   <servlet-mapping>
