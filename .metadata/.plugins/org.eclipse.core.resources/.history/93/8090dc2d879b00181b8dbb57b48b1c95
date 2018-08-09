@@ -1,0 +1,10 @@
+<html>
+<head>
+</head>
+<body>
+<form action = "#" align="center">
+<input type="text" name="name" placeholder="name">
+<input type="text" name="username"  placeholder="username">
+</form>
+</body>
+</html>

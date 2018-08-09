@@ -1,0 +1,14 @@
+<html>
+<head>
+</head>
+<body>
+<form action ="#">
+<label for="username">Enter user name:</label>
+<input type="text" name ="username" placeholder="username">
+<br>
+<label for="password">Enter password:</label>
+<input type="password" name ="password" placeholder="password">
+<input type="button" value="submit" onclick="location.href='#'">
+</form>
+</body>
+</html>

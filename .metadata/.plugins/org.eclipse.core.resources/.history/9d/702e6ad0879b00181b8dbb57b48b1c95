@@ -1,0 +1,19 @@
+<html>
+<head>
+<style>
+form {
+text-align : center;
+}
+</style>
+</head>
+<body>
+<form action = "#">
+<h6>Enter </h6>
+<input type="text" name="name" placeholder="name">
+<input type="text" name="username"  placeholder="username">
+<br>
+<input type="password" name="password"  placeholder="password">
+<input type="text" name="phoneNumber"  placeholder="phone number">
+</form>
+</body>
+</html>

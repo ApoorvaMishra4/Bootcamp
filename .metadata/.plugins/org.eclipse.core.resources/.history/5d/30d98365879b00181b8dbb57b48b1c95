@@ -1,0 +1,16 @@
+<html>
+<head>
+<style>
+form {
+text-align : center;
+}
+</style>
+</head>
+<body>
+<form action = "#">
+Login your account!<br>Enter name:
+<input type="text" name="name" placeholder="name">
+<input type="text" name="username"  placeholder="username">
+</form>
+</body>
+</html>

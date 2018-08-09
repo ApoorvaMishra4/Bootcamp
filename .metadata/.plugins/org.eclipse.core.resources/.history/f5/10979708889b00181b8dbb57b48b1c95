@@ -1,0 +1,21 @@
+<html>
+<head>
+<style>
+form {
+text-align : center;
+}
+</style>
+</head>
+<body>
+<form action = "#">
+<h3>Enter details :</h3>
+<label for="name">Name</label>
+<input type="text" name="name" placeholder="name">
+<label for="username">User name</label>
+<input type="text" name="username"  placeholder="username">
+<br>
+<input type="password" name="password"  placeholder="password">
+<input type="text" name="phoneNumber"  placeholder="phone number">
+</form>
+</body>
+</html>
