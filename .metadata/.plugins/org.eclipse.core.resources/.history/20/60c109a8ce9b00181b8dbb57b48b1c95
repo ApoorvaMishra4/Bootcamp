@@ -11,16 +11,17 @@ import javax.servlet.http.HttpServletResponse;
 import com.jda.dao.DatabaseUtil;
 import com.jda.model.UserModel;
 
-public class LogInController extends HttpServlet {
+public class LogInController extends HttpServlet{
 	private static final long serialVersionUID = 1L;
-
+	
 	@Override
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		UserModel user = DatabaseUtil.fetchData(request.getParameter("email"), request.getParameter("password"));
-		if (user == null) {
-			System.out.print("null");
-		} else {
+		if(user == null){
+			
+		}
+		else
+		{
 			request.getSession().setAttribute("user", user);
 			RequestDispatcher dispatcher = request.getRequestDispatcher(response.encodeRedirectUrl("Home.jsp"));
 			dispatcher.forward(request, response);
