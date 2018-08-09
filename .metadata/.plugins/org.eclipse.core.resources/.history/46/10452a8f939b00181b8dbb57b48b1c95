@@ -1,0 +1,23 @@
+package com.jda.controller;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import javax.servlet.http.HttpServlet;
+
+public class SignUpController extends HttpServlet{
+	try {
+		Class.forName("com.mysql.jdbc.Driver");
+		Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bridgeit");
+		PreparedStatement pst = connection
+				.prepareStatement("select * from user where username = ? and password = ?");
+		pst.setString(1, "");
+		pst.setString(2, "qwerty");
+		int status = pst.executeUpdate();
+	} 
+	catch (SQLException | ClassNotFoundException e){
+		e.printStackTrace();
+	}
+}

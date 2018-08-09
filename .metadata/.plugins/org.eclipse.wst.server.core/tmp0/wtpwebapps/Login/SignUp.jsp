@@ -4,7 +4,7 @@
 </style>
 </head>
 <body>
-<form action = "#">
+<form method = "post" action="registration">
 <h3>Sign up here!</h3>
 <label for="name">Name</label>
 <input type="text" name="name" placeholder="name">
