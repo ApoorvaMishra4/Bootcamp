@@ -1,0 +1,17 @@
+<%@page import="com.jda.model.UserModel"%>
+<html>
+<head>
+</head>
+<body>
+	<%
+		String username = "";
+		if (request.getSession().getAttribute("user") != null) {
+			UserModel user = (UserModel) request.getSession().getAttribute("user");
+			username = user.getName();
+		}
+	%>
+	Welcome :
+	<%=username%>
+	<input type="submit">logout
+</body>
+</html>

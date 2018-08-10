@@ -22,7 +22,7 @@ public class SignUpController extends HttpServlet {
 		user.setPassword(request.getParameter("password"));
 		user.setPhoneNumber(request.getParameter("phoneNumber"));
 		DatabaseUtil.addData(user);
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher(response.encodeRedirectUrl("Login.jsp"));
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher(response.encodeRedirectUrl("index.jsp"));
 		requestDispatcher.forward(request, response);
 	}
 }
