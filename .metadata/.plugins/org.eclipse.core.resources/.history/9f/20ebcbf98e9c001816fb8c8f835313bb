@@ -20,7 +20,6 @@ public class LogOutController extends HttpServlet{
 //		out.println("Successfully logged out!");
 		HttpSession session = request.getSession(false);
 		session.removeAttribute("user");
-		session.invalidate();
 		RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
 		out.println("<font color=blue>Successfully logged out!</font>");
 		dispatcher.include(request, response);

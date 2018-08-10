@@ -5,7 +5,7 @@
 <body>
 	<%
 		String username = "";
-		response.setHeader("cache-control", "no-cache,no-store,must-revalidate");
+	response.setHeader("cache-control", "no-cache,no-store,must-revalidate");
 		if (session != null) {
 			if (session.getAttribute("user") != null) {
 				UserModel user = (UserModel) request.getSession().getAttribute("user");

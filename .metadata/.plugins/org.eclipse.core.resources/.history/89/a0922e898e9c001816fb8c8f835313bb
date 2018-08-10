@@ -10,8 +10,8 @@ import java.sql.Statement;
 import com.jda.model.UserModel;
 
 public class DatabaseUtil {
-	private static String jdbcUrl = "jdbc:mysql://" + System.getenv("DBHOST") + ":3306/" + System.getenv("DBNAME")
-			+ "?user=" + System.getenv("DBUSER") + "&password=" + System.getenv("DBPASSWORD");
+	private static String jdbcUrl = "jdbc:mysql://" + System.getenv("DBHOST") + ":3306/" + System.getenv("DBNAME") + "?user="
+			+ System.getenv("DBUSER") + "&password=" + System.getenv("DBPASSWORD");
 
 	public static Connection getConnection() throws ClassNotFoundException, SQLException {
 		Class.forName("com.mysql.jdbc.Driver");
