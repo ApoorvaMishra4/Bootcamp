@@ -27,20 +27,21 @@ public class UserDao implements IUserDao {
 			JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 			id = jdbcTemplate.update(query, object);
 			return id;
-
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return id;
 	}
-
-	public Model checkLoginDetails(Model model) {
+	
+	public Model checkLoginDetails(Model model)
+	{
 		int id = 0;
-		String query = "select * from data where email=? and password=?";
+		String query = "select * from data where email=" + model.getEmail() + "and password=" + model.getPassword();
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-		return (Model) jdbcTemplate.queryForObject(query, new Object[] { model.getEmail(), model.getPassword() },
-				new RowMapper() {
-					public Object mapRow(ResultSet resultSet, int rowNum) throws SQLException {
+		return (Model) jdbcTemplate.queryForObject(query, 
+				new Object[] {model.getEmail(), model.getPassword()}, new RowMapper(){
+					public Object mapRow (ResultSet resultSet, int rowNum) throws SQLException {
 						Model user = new Model();
 						user.setName(resultSet.getString("name"));
 						user.setEmail(resultSet.getString("email"));
@@ -50,4 +51,5 @@ public class UserDao implements IUserDao {
 					}
 				});
 	}
+
 }

@@ -36,7 +36,7 @@ public class UserDao implements IUserDao {
 
 	public Model checkLoginDetails(Model model) {
 		int id = 0;
-		String query = "select * from data where email=? and password=?";
+		String query = "select * from data where email=" + model.getEmail() + "and password=" + model.getPassword();
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 		return (Model) jdbcTemplate.queryForObject(query, new Object[] { model.getEmail(), model.getPassword() },
 				new RowMapper() {

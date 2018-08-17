@@ -1,0 +1,37 @@
+package com.jda.dao;
+
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import com.jda.model.Model;
+import com.mysql.jdbc.Connection;
+
+public class UserDao implements IUserDao {
+
+	@Autowired
+	DataSource dataSource;
+
+	public int registerUser(Model model) {
+		int id = 0;
+		try {
+			java.sql.Connection connection = dataSource.getConnection();
+			String query = "insert into data values(?,?,?,?)";
+			System.out.println("NAME : " + model.getName());
+			System.out.println("EM : " + model.getEmail());
+			System.out.println("PS : " + model.getPassword());
+			System.out.println("PN : " + model.getPhoneNumber());
+			Object object[] = new Object[] { model.getName(), model.getEmail(), model.getPassword(),
+					model.getPhoneNumber() };
+			JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+			id = jdbcTemplate.update(query, object);
+			return id;
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return id;
+	}
+
+}

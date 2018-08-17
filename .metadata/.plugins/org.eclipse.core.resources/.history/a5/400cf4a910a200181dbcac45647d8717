@@ -37,6 +37,10 @@ public class Controller {
 
 	@RequestMapping(value = "/login")
 	public ModelAndView login(@ModelAttribute("User") Model model) {
+		System.out.println(model.getName());
+		System.out.println(model.getEmail());
+		System.out.println(model.getPassword());
+		System.out.println(model.getPhoneNumber());
 		return new ModelAndView("Home");
 	}
 

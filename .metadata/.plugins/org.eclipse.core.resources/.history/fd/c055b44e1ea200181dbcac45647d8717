@@ -1,13 +1,11 @@
 package com.jda.dao;
 
 import java.sql.ResultSet;
-import java.sql.SQLException;
 
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
 
 import com.jda.model.Model;
 import com.mysql.jdbc.Connection;
@@ -27,20 +25,21 @@ public class UserDao implements IUserDao {
 			JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 			id = jdbcTemplate.update(query, object);
 			return id;
-
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return id;
 	}
-
-	public Model checkLoginDetails(Model model) {
+	
+	public Model checkLoginDetails(Model model)
+	{
 		int id = 0;
-		String query = "select * from data where email=? and password=?";
+		String query = "select * from data where email=" + model.getEmail() + "and password=" + model.getPassword();
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-		return (Model) jdbcTemplate.queryForObject(query, new Object[] { model.getEmail(), model.getPassword() },
-				new RowMapper() {
-					public Object mapRow(ResultSet resultSet, int rowNum) throws SQLException {
+		return (model) jdbcTemplate.queryForObject(query, 
+				new Object[] {model.getEmail(), model.getPassword(), new RowMapper(){
+					public Object mapRow (ResultSet resultSet, int rowNum) throws SQLException {
 						Model user = new Model();
 						user.setName(resultSet.getString("name"));
 						user.setEmail(resultSet.getString("email"));
@@ -48,6 +47,9 @@ public class UserDao implements IUserDao {
 						user.setPhoneNumber(resultSet.getString("phoneNumber"));
 						return user;
 					}
-				});
+					}
+				}
+				)
 	}
+
 }

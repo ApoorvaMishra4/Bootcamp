@@ -89,3 +89,10 @@
 127.0.0.1 - - [17/Aug/2018:10:43:17 +0000] "GET /SpringLogin/registration HTTP/1.1" 200 1018
 127.0.0.1 - - [17/Aug/2018:10:44:19 +0000] "POST /SpringLogin/registerUser HTTP/1.1" 200 483
 127.0.0.1 - - [17/Aug/2018:10:44:39 +0000] "GET /SpringLogin/registration HTTP/1.1" 200 1018
+127.0.0.1 - - [17/Aug/2018:11:27:46 +0000] "GET / HTTP/1.1" 404 1074
+127.0.0.1 - - [17/Aug/2018:11:27:47 +0000] "GET /SpringLogin/ HTTP/1.1" 200 483
+127.0.0.1 - - [17/Aug/2018:11:28:41 +0000] "POST /SpringLogin/login HTTP/1.1" 200 188
+127.0.0.1 - - [17/Aug/2018:11:28:50 +0000] "POST /SpringLogin/logout HTTP/1.1" 404 1047
+127.0.0.1 - - [17/Aug/2018:13:15:57 +0000] "GET / HTTP/1.1" 404 1074
+127.0.0.1 - - [17/Aug/2018:13:15:57 +0000] "GET /SpringLogin/ HTTP/1.1" 200 483
+127.0.0.1 - - [17/Aug/2018:13:16:48 +0000] "POST /SpringLogin/login HTTP/1.1" 200 188

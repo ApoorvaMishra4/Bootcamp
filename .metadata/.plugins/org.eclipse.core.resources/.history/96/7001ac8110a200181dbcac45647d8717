@@ -37,6 +37,7 @@ public class Controller {
 
 	@RequestMapping(value = "/login")
 	public ModelAndView login(@ModelAttribute("User") Model model) {
+		System.out.println(model.getEmail());
 		return new ModelAndView("Home");
 	}
 
