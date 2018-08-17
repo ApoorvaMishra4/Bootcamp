@@ -1,0 +1,29 @@
+package com.jda.config;
+
+
+import javax.sql.DataSource;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.web.servlet.ViewResolver;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
+
+@org.springframework.context.annotation.Configuration
+@ComponentScan("com.jda.controller")
+@EnableWebMvc
+public class Configuration {
+	@Bean
+	public ViewResolver getViewResolver() {
+		InternalResourceViewResolver internalResourceViewResolver = new InternalResourceViewResolver();
+		internalResourceViewResolver.setPrefix("/WEB-INF/");
+		internalResourceViewResolver.setSuffix(".jsp");
+		return internalResourceViewResolver;
+	}
+	
+	public DataSource getDataSource(){
+		DriverManagerDataSource dataSource = new DriverManagerDataSource();
+		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
+	}
+}

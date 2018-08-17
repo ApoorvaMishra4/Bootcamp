@@ -1,0 +1,9 @@
+package com.jda.service;
+
+import org.springframework.web.servlet.ModelAndView;
+
+import com.jda.model.Model;
+
+public interface IUserService {
+	public boolean registerUser(Model user);
+}

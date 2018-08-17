@@ -1,0 +1,5 @@
+package com.jda.dao;
+
+public class UserDao {
+
+}

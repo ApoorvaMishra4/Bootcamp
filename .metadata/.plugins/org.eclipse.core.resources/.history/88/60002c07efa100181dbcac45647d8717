@@ -1,0 +1,26 @@
+package com.jda.dao;
+
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.jda.model.Model;
+
+public class UserDao implements IUserDao{
+
+	@Autowired
+	DataSource dataSource;
+	
+	public int registerUser() {
+		try {
+			Connection connection = data
+		}
+		return 0;
+	}
+
+	public Model loginUser() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

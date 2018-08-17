@@ -1,0 +1,7 @@
+package com.jda.service;
+
+public interface IUserService {
+	public void registerUser(){
+		
+	}
+}

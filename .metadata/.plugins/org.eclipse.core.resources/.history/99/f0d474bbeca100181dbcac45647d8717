@@ -1,0 +1,17 @@
+package com.jda.service;
+
+import com.jda.model.Model;
+
+public class UserService implements IUserService {
+
+	public boolean registerUser() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public Model loginUser() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

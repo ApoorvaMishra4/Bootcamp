@@ -1,0 +1,7 @@
+package com.jda.dao;
+
+import com.jda.model.Model;
+
+public interface IUserDao {
+	public boolean registerUser(Model user);
+}
