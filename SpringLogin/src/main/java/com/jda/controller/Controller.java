@@ -1,10 +1,13 @@
 package com.jda.controller;
 
+import java.sql.SQLException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.jda.dao.UserDao;
 import com.jda.model.Model;
 import com.jda.service.IUserService;
 
@@ -36,8 +39,13 @@ public class Controller {
 	}
 
 	@RequestMapping(value = "/login")
-	public ModelAndView login(@ModelAttribute("User") Model model) {
-		return new ModelAndView("Home");
+	public ModelAndView login(@ModelAttribute("User") Model model) throws SQLException, ClassNotFoundException{
+		UserDao dao = new UserDao();
+		Model data = dao.checkLoginDetails(model);
+		if (data != null) {
+			return new ModelAndView("Home");
+		}
+		return new ModelAndView("../index");
 	}
 
 }

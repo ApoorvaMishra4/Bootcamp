@@ -6,16 +6,18 @@ import java.sql.SQLException;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
+import com.jda.config.Configuration;
 import com.jda.model.Model;
 import com.mysql.jdbc.Connection;
 
 public class UserDao implements IUserDao {
 
 	@Autowired
-	private DataSource dataSource;
+	DataSource dataSource;
 
 	public int registerUser(Model model) {
 		int id = 0;
@@ -34,20 +36,25 @@ public class UserDao implements IUserDao {
 		return id;
 	}
 
-	public Model checkLoginDetails(Model model) {
-		int id = 0;
+	public Model checkLoginDetails(Model model) throws SQLException, ClassNotFoundException {
 		String query = "select * from data where email=? and password=?";
+		Configuration configuration = new Configuration();
+		dataSource = configuration.getDataSource();
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-		return (Model) jdbcTemplate.queryForObject(query, new Object[] { model.getEmail(), model.getPassword() },
-				new RowMapper() {
-					public Object mapRow(ResultSet resultSet, int rowNum) throws SQLException {
-						Model user = new Model();
-						user.setName(resultSet.getString("name"));
-						user.setEmail(resultSet.getString("email"));
-						user.setPassword(resultSet.getString("password"));
-						user.setPhoneNumber(resultSet.getString("phoneNumber"));
-						return user;
-					}
-				});
+		try {
+			return (Model) jdbcTemplate.queryForObject(query, new Object[] { model.getEmail(), model.getPassword() },
+					new RowMapper() {
+						public Object mapRow(ResultSet resultSet, int rowNum) throws SQLException {
+							Model user = new Model();
+							user.setName(resultSet.getString("name"));
+							user.setEmail(resultSet.getString("email"));
+							user.setPassword(resultSet.getString("password"));
+							user.setPhoneNumber(resultSet.getString("phoneNumber"));
+							return user;
+						}
+					});
+		} catch (Exception e) {
+			return null;
+		}
 	}
 }
