@@ -1,0 +1,64 @@
+package com.jda.dao;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
+
+import com.jda.config.Configuration;
+import com.jda.model.Model;
+import com.mysql.jdbc.Connection;
+
+public class UserDao implements IUserDao {
+
+	@Autowired
+	DataSource dataSource;
+
+	public int registerUser(Model model) {
+		int id = 0;
+		try {
+			java.sql.Connection connection = dataSource.getConnection();
+			String query = "insert into data values(?,?,?,?)";
+			Object object[] = new Object[] { model.getName(), model.getEmail(), model.getPassword(),
+					model.getPhoneNumber() };
+			JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+			id = jdbcTemplate.update(query, object);
+			return id;
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return id;
+	}
+
+	public Model checkLoginDetails(Model model) throws SQLException, ClassNotFoundException {
+		String query = "select * from data where email=? and password=?";
+		Configuration configuration = new Configuration();
+		dataSource = configuration.getDataSource();
+		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+		try {
+			return (Model) jdbcTemplate.queryForObject(query, new Object[] { model.getEmail(), model.getPassword() },
+					new RowMapper() {
+						public Object mapRow(ResultSet resultSet, int rowNum) throws SQLException {
+							Model user = new Model();
+							user.setName(resultSet.getString("name"));
+							user.setEmail(resultSet.getString("email"));
+							user.setPassword(resultSet.getString("password"));
+							user.setPhoneNumber(resultSet.getString("phoneNumber"));
+							return user;
+						}
+					});
+		} catch (Exception e) {
+			return null;
+		}
+	}
+
+	public Model getLoginDetails(Model user) {
+		return null;
+	}
+}

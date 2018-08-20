@@ -36,7 +36,7 @@ public class UserDao implements IUserDao {
 		return id;
 	}
 
-	public Model checkLoginDetails(Model model) throws SQLException, ClassNotFoundException {
+	public Model getLoginDetails(Model model) throws ClassNotFoundException {
 		String query = "select * from data where email=? and password=?";
 		Configuration configuration = new Configuration();
 		dataSource = configuration.getDataSource();
@@ -57,4 +57,5 @@ public class UserDao implements IUserDao {
 			return null;
 		}
 	}
+
 }

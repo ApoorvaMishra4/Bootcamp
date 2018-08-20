@@ -1,9 +1,9 @@
 package com.jda.service;
 
-import org.springframework.web.servlet.ModelAndView;
-
 import com.jda.model.Model;
+import org.springframework.web.servlet.ModelAndView;
 
 public interface IUserService {
 	public boolean registerUser(Model user);
+	public ModelAndView checkLoginDetails(Model user) throws ClassNotFoundException;
 }

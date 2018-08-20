@@ -39,13 +39,7 @@ public class Controller {
 	}
 
 	@RequestMapping(value = "/login")
-	public ModelAndView login(@ModelAttribute("User") Model model) throws SQLException, ClassNotFoundException{
-		UserDao dao = new UserDao();
-		Model data = dao.checkLoginDetails(model);
-		if (data != null) {
-			return new ModelAndView("Home");
-		}
-		return new ModelAndView("../index");
+	public ModelAndView login(@ModelAttribute("User") Model model) throws SQLException, ClassNotFoundException {
+		return userService.checkLoginDetails(model);
 	}
-
 }

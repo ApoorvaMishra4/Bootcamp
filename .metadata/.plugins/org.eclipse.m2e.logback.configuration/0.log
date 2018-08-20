@@ -3569,3 +3569,156 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: Unrecognise
 2018-08-20 04:06:17,287 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2018-08-20 04:06:17,288 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2018-08-20 04:06:17,288 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
+2018-08-20 05:32:06,745 [Worker-34] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.jda:SpringLogin:0.0.1-SNAPSHOT @ /home/bridgelabz/java-programs/Bootcamp/SpringLogin/pom.xml.
+2018-08-20 05:32:07,688 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:32:07,688 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/main/resources
+2018-08-20 05:32:07,697 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:32:07,697 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
+2018-08-20 05:32:07,731 [Worker-34] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of SpringLogin
+2018-08-20 05:32:07,731 [Worker-34] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for SpringLogin
+2018-08-20 05:32:07,735 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:32:19,536 [Worker-32] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.jda:SpringLogin:0.0.1-SNAPSHOT @ /home/bridgelabz/java-programs/Bootcamp/SpringLogin/pom.xml.
+2018-08-20 05:32:20,298 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:32:20,299 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/main/resources
+2018-08-20 05:32:20,300 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:32:20,300 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
+2018-08-20 05:34:37,804 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:34:37,804 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/main/resources
+2018-08-20 05:34:37,804 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:34:37,805 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
+2018-08-20 05:35:04,650 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:35:04,650 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/main/resources
+2018-08-20 05:35:04,650 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:35:04,650 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
+2018-08-20 05:35:16,030 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:35:16,031 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/main/resources
+2018-08-20 05:35:16,031 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:35:16,031 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
+2018-08-20 05:35:34,764 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:35:34,764 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/main/resources
+2018-08-20 05:35:34,765 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:35:34,765 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
+2018-08-20 05:36:02,642 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:36:02,642 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/main/resources
+2018-08-20 05:36:02,643 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:36:02,643 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
+2018-08-20 05:36:37,657 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:36:37,657 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/main/resources
+2018-08-20 05:36:37,657 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:36:37,658 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
+2018-08-20 05:36:43,080 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:36:43,080 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/main/resources
+2018-08-20 05:36:43,082 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:36:43,082 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
+2018-08-20 05:37:03,662 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:37:03,662 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/main/resources
+2018-08-20 05:37:03,663 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:37:03,663 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
+2018-08-20 05:37:29,930 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:37:29,931 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/main/resources
+2018-08-20 05:37:29,931 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:37:29,931 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
+2018-08-20 05:37:59,272 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:37:59,272 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/main/resources
+2018-08-20 05:37:59,273 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:37:59,273 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
+2018-08-20 05:38:01,366 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:38:01,366 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/main/resources
+2018-08-20 05:38:01,367 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:38:01,367 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
+2018-08-20 05:38:51,546 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:38:51,547 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/main/resources
+2018-08-20 05:38:51,547 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:38:51,547 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
+2018-08-20 05:39:03,061 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:39:03,061 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/main/resources
+2018-08-20 05:39:03,061 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:39:03,062 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
+2018-08-20 05:39:55,534 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:39:55,534 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/main/resources
+2018-08-20 05:39:55,542 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:39:55,543 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
+2018-08-20 05:40:02,156 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:40:02,157 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/main/resources
+2018-08-20 05:40:02,162 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:40:02,162 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
+2018-08-20 05:40:12,958 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:40:12,958 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/main/resources
+2018-08-20 05:40:12,958 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:40:12,958 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
+2018-08-20 05:41:21,445 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:41:21,445 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/main/resources
+2018-08-20 05:41:21,446 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:41:21,446 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
+2018-08-20 05:41:26,217 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:41:26,217 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/main/resources
+2018-08-20 05:41:26,218 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:41:26,218 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
+2018-08-20 05:41:56,457 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:41:56,457 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/main/resources
+2018-08-20 05:41:56,458 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:41:56,458 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
+2018-08-20 05:42:36,761 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:42:36,761 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/main/resources
+2018-08-20 05:42:36,762 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:42:36,762 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
+2018-08-20 05:42:51,437 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:42:51,437 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/main/resources
+2018-08-20 05:42:51,437 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:42:51,438 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
+2018-08-20 05:43:48,067 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:43:48,067 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/main/resources
+2018-08-20 05:43:48,067 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:43:48,067 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
+2018-08-20 05:43:52,133 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:43:52,133 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/main/resources
+2018-08-20 05:43:52,133 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:43:52,133 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
+2018-08-20 05:54:31,560 [Worker-49] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for SpringLogin
+2018-08-20 05:54:31,726 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:54:31,726 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/main/resources
+2018-08-20 05:54:31,727 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 05:54:31,727 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
+2018-08-20 05:54:31,727 [Worker-49] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of SpringLogin
+2018-08-20 05:54:31,727 [Worker-49] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for SpringLogin
+2018-08-20 05:54:31,731 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 06:01:11,554 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 06:01:11,556 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-20 06:01:11,557 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 06:01:11,557 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
+2018-08-20 06:21:48,011 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 06:21:48,012 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-20 06:21:48,013 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 06:21:48,013 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
+2018-08-20 06:22:19,610 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 06:22:19,610 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-20 06:22:19,611 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 06:22:19,611 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
+2018-08-20 06:22:35,513 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 06:22:35,513 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-20 06:22:35,514 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 06:22:35,514 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
+2018-08-20 06:26:15,992 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 06:26:16,006 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-20 06:26:16,009 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 06:26:16,010 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
+2018-08-20 06:27:08,549 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 06:27:08,552 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-20 06:27:08,553 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 06:27:08,553 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
+2018-08-20 06:27:10,679 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 06:27:10,680 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-20 06:27:10,681 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 06:27:10,681 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
+2018-08-20 06:27:12,806 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 06:27:12,806 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-20 06:27:12,807 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 06:27:12,807 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
+2018-08-20 06:27:46,861 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 06:27:46,861 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-20 06:27:46,862 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 06:27:46,862 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
+2018-08-20 06:28:00,620 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 06:28:00,620 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-20 06:28:00,621 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-20 06:28:00,621 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bridgelabz/java-programs/Bootcamp/SpringLogin/src/test/resources
