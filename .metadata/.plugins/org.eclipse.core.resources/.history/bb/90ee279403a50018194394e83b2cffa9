@@ -1,0 +1,5 @@
+package com.jda.utility;
+
+public class MailService {
+
+}
